@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="top"><span class="material-symbols-outlined">arrow_upward</span>TOP</button>
+    <script>
+        // 스크롤이 맨 위로 이동하는 함수
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 부드러운 스크롤 효과를 사용합니다.
+            });
+        }
+
+        // 버튼 클릭 시 스크롤 이벤트를 발생시킵니다.
+        var button = document.getElementById('top');
+        button.addEventListener('click', scrollToTop);
+
+
+    </script>
+
+    <div id="body">
+        <header>
+            <h1>
+                Document
+            </h1>
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li>About</li>
+                <li>Shop</li>
+            </ul>
+        </header>
+    </div>
+    <div id="body_1"><a href="images/doggo.webp"></a></div>
+
+</body>
+
+</html>
