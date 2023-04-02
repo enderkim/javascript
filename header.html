@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+            
+            
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            
+
+        }
+
+        a:hover {
+            color: red !important;
+        }
+
+        header {
+            padding-left: 30px;
+            overflow: hidden;
+            /*넘치면 사라지게해줘... */
+            transition: all 1s;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            /* 고정 */
+            top: 0;
+            left: 0;
+            color: aliceblue;
+            width: 100%;
+            /* width가 있어야 안에 내용이없어도 보임 */
+        }
+
+        .over {
+            background-color: white;
+        }
+
+        header.over a {
+            color: black;
+        }
+
+
+        /*header:hover {
+            background-color: white;
+            color: black;
+        }*/
+        /*header.down {
+            top: -100px;
+        }
+        header.up {
+            top: 0px;
+        } 이것도가능*/
+        section {
+            background-color: rgb(191, 178, 178);
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            text-align:center;
+            align-items: center; /* 수직 가운데 정렬 */
+        }
+    
+        header {
+            color: white;
+            display: flex;
+
+        }
+
+        header>h1 {
+            margin: 20px;
+        }
+
+        header>ul {
+            display: flex;
+            margin: 32px;
+            margin-left: auto;
+            padding-top: 10px;
+        }
+
+        header>ul>li {
+            list-style: none;
+            padding: 0px 20px;
+            font-size: 10px;
+            position: relative;
+        }
+
+        /*header>ul>li {
+            
+            width: 100px;
+            margin-left: 30px;
+        } */
+
+
+        section:nth-of-type(1) {
+            background-image: url(./scroll_/images/valorant.gif);
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1910px 1070px;
+
+        
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+        .main {
+            text-align: center;
+        }
+
+        .playButton {
+            
+            margin: 0 auto;
+            display: block;
+            width: 190px;
+            height: 55px;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-sizing: border-box;
+            line-height: 50px;
+            padding: 0 20px;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        .playButton:hover {
+            background-color: white;
+            line-height: none;
+            
+        }
+
+        section:nth-of-type(2) {
+
+            background-image: url("./scroll_/images/valorant1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        section:nth-of-type(3) {
+
+            background-image: url("./scroll_/images/valorant2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        footer {
+            background-color: grey;
+            height: 200px;
+        }
+        footer ul {
+            list-style: none;
+            padding: 30px;
+        }
+        footer ul li {
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="over">
+        <h1>
+            <a href="">Valorant</a>
+        </h1>
+        <ul>
+            <li><a href="">플레이 방법</a></li>
+            <li><a href="">이벤트</a></li>
+            <li><a href="">고객지원</a></li>
+            <li><a href="">내 정보</a></li>
+        </ul>
+
+    </header>
+    <!-- h1>a>{SiteLogo} -->
+
+    <section class="main">
+        <article>
+        <h3 style="color: white;">5대5 캐릭터 기반 슈팅 게임<br>발로란트를 소개합니다</h3>
+        
+        <a href="" class="playButton">플레이하기</a>
+        </article>
+    </section> 
+    <section></section>
+    <section></section>
+    <footer>
+        <ul>
+            <li>How To Play</li>
+            <li>Event</li>
+            <li>Help</li>
+            <li>MyPage</li>
+        </ul>
+    </footer>
+
+    <script>
+        /*//마우스 이벤트(document.get...불러오는 코드)
+        console.log(document.getElementById("header"));
+
+        //문서에서.아이디를불러온다"header".마우스 호버 시 = 일어난다.
+        document.getElementById("header").onmouseover = function () {
+            //문서에서.아이디를불러온다"header".<style> header { background-color: white;}의 형식.
+            document.getElementById("header").style.backgroundColor = "white";
+            console.log("마우스오버");
+        }
+        document.getElementById("header").onmouseout = function () {
+            document.getElementById("header").style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+            console.log("마우스아웃");
+        }*/
+
+        /*//변수 생성 하면 doc...을 굳이 호명할 필요없음.
+        
+
+        var myHeader = document.getElementById("header");
+        //마우스 이벤트
+        console.log(myHeader);
+
+        //문서에서.아이디를불러온다"header".마우스 호버 시 = 일어난다.
+        myHeader.onmouseover = function () {
+            //문서에서.아이디를불러온다"header".<style> header { background-color: white;}의 형식.
+            myHeader.style.backgroundColor = "white";
+            console.log("마우스오버");
+        }
+        myHeader.onmouseout = function () {
+            myHeader.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+            console.log("마우스아웃");
+
+            
+        };*/
+
+        //this 를 사용하면 불려진 변수를 쉽게 불러온다. 
+
+        var myHeader = document.getElementById("header");
+        //마우스 이벤트
+        //console.log(this);
+        //console.log(myHeader);
+
+        //문서에서.아이디를불러온다"header".마우스 호버 시 = 일어난다.
+        myHeader.onmouseover = function () {
+            //문서에서.아이디를불러온다"header".<style> header { background-color: white;}의 형식.
+            //this.style.backgroundColor = "white";
+            //this.style.color = "black";
+            //console.log("마우스오버");
+            this.classList.add("over");
+        }
+        myHeader.onmouseout = function () {
+            //this.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+            //this.style.color = "white";
+            //console.log("마우스아웃");
+            this.classList.remove("over");
+        }
+        //스크롤 이벤트
+        //윈도우한테 이벤트를 수행 - 스크롤 , 함수를 즉시 실행
+        //스크롤 객체
+        window.addEventListener("scroll", function () {
+
+            console.log(window.scrollY); //스크롤 y값 입력
+            if (window.scrollY > 200) {
+                myHeader.style.top = -100 + "px"; //헤더의 스타일 중 top값을 -100픽셀로(마이너스값으로) - 부드럽게
+                //myHeader.style.height = 0 + "px";//헤더의 스타일 중 높이를 0 픽셀로 
+                //이런방법도있음
+                //myHeader.classList.add("down");
+                //myHeader.classList.remove("up");
+                console.log("220 이상");
+            }
+            else {
+
+                console.log("220 이하");
+                myHeader.style.top = 0 + "px"; //헤더의 스타일 중 top값을 0픽셀로
+                //myHeader.style.height = 100 + "px"; //헤더의 스타일 중 높이를 100픽셀로
+                //이런방법도있음
+                //myHeader.classList.remove("down");
+                //myHeader.classList.add("up");
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
